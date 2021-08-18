@@ -27,7 +27,7 @@ import java.awt.BasicStroke;
 
 public class PongPanel extends JPanel implements ActionListener, KeyListener {
 // ==== CONTATNTS ====
-	public static final Color BACKGROUND_COLOUR = Color.WHITE;
+	public static final Color BACKGROUND_COLOUR = Color.BLACK;
 	public static final int TIMER_DELAY = 5;
 	public static final int BALL_MOVEMENT_SPEED = 2;
 	public static final int PADDLE_MOVEMENT_SPEED = 3;
@@ -36,7 +36,7 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
 	public static final int SCORE_X_PADDING = 100;
 	public static final int SCORE_Y_PADDING = 100;
 	public static final int SCORE_FONT_SIZE = 50;
-	public static final String SCORE_FONT_TYPE = "Serif";
+	public static final String SCORE_FONT_TYPE = "Monospace";
 	// message 'You won'
 	public static final String WINNING_MESSAGE = "YOU WON!";
 	public static final int WIN_X_PADDING = 100;
@@ -285,7 +285,7 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
 			win_X_padding = WIN_X_PADDING;
 		}
 		else if (gameWinner == Player.Two) {
-			win_X_padding = getWidth() - WIN_X_PADDING;
+			win_X_padding = getWidth()/2 + WIN_X_PADDING;
 		}
 		
 		Font winnerFont = new Font(SCORE_FONT_TYPE, Font.BOLD, WIN_FONT_SIZE);
